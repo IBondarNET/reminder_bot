@@ -76,7 +76,7 @@ def eventType(update: Update, context: CallbackContext) -> int:
         if text == 'Meeting':
             update.message.reply_text('Введите название события: ')
             user.currentEvent = Meeting()
-            return ENTERDATE
+            return ENTERNAME
 
         elif text == 'Reminder':
             update.message.reply_text('Введите название события: ')

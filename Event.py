@@ -45,18 +45,17 @@ class Birthday(AbstractEvent):
 
 
 class Meeting(AbstractEvent):
-    __place = None
+    __place = None    
 
     def display(self):        
         return super().display() + '\n' + self.place
-
 
     @property
     def place(self):      
         return self.__place
 
     @place.setter
-    def place(self, place):                
+    def place(self, place):            
         self.__place = "Место встречи: " + place
 
 class Reminder(AbstractEvent):
@@ -64,7 +63,6 @@ class Reminder(AbstractEvent):
 
     def display(self):        
         return super().display() + '\n' + self.note
-
 
     @property
     def note(self):      
