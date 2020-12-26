@@ -81,7 +81,7 @@ def eventType(update: Update, context: CallbackContext) -> int:
         elif text == 'Reminder':
             update.message.reply_text('Введите название события: ')
             user.currentEvent = Reminder()
-            return ENTERDATE
+            return ENTERNAME
 
         else:
             update.message.reply_text('Выберите тип события:', reply_markup=ReplyKeyboardMarkup([['Birthday'], ['Meeting'], ['Reminder']], one_time_keyboard=True),)
